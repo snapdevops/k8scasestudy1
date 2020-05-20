@@ -37,3 +37,5 @@ lrwxrwxrwx 1 root root 21 May 20 18:51 nginx-web.html -> ..data/nginx-web.html
 
 
 -	Setup auto-scaling for nginx pods if CPU tries to reach a threshold (you define it), min pod is 1, max is 2
+
+kubectl autoscale deploy nginx-deployment --min=1 --max=2 --cpu-percent=80
