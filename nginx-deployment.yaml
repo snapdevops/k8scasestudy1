@@ -22,7 +22,7 @@ items:
     strategy:
       rollingUpdate:
         maxSurge: 25%
-        maxUnavailable: 25%
+        maxUnavailable: 0%
       type: RollingUpdate
     template:
       metadata:
