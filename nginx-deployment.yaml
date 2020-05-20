@@ -32,6 +32,13 @@ items:
       spec:
         containers:
         - image: nginx:1.14.2
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "200Mi"
+              cpu: "500m"
           imagePullPolicy: IfNotPresent
           name: nginx
           ports:
