@@ -1,0 +1,431 @@
+tarted by user admin
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/aws2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] withCredentials
+Masking supported pattern matches of $AWS_ACCESS_KEY_ID or $AWS_SECRET_ACCESS_KEY
+[Pipeline] {
+[Pipeline] echo
+Listing snapshots of ebs.
+[Pipeline] sh
++ aws ebs list-snapshot-blocks --region us-east-2 --snapshot-id snap-01d21f616268c96d3 --starting-block-index 1000 --max-results 100
+{
+    "VolumeSize": 8, 
+    "Blocks": [
+        {
+            "BlockToken": "AAQBAR5Ts4NyftUHdVR2S026J6A1NuN/mngGM2IbFUz2bXRLdmQnRJtIXRRb", 
+            "BlockIndex": 1000
+        }, 
+        {
+            "BlockToken": "AAQBARQtXFcMl95yBRxlJcnKvuuVUA/7S57/Z1TZkKyneHTfxXddE54cJWug", 
+            "BlockIndex": 1001
+        }, 
+        {
+            "BlockToken": "AAQBAbo6P1J+WHuB3Z64Zh3UPMKFXU3k1ogJ8pjQajZ2Lf0L80sqLKIEUn3s", 
+            "BlockIndex": 1002
+        }, 
+        {
+            "BlockToken": "AAQBAarbaDGPv1X5u9fjvzv9wpWJKVjwRbJf75/zMdOxyl4DeLT36sst0dTQ", 
+            "BlockIndex": 1003
+        }, 
+        {
+            "BlockToken": "AAQBAZVqMLc6jeEYEL7iOyi3pNFRhpp5YR5hgf0pH0Nol9MyP114652j/O98", 
+            "BlockIndex": 1004
+        }, 
+        {
+            "BlockToken": "AAQBATfOkwC4QnAAkW2nOVj0J6LJ2Z688TfP2uwH8Bl/49FpxDNw1Wa+2ffX", 
+            "BlockIndex": 1005
+        }, 
+        {
+            "BlockToken": "AAQBAbYW1+26kUUBVEJ8qzXYVP6G+cuIh6TAbdvqJ8jEjWFEq9ZVBprJZ9NF", 
+            "BlockIndex": 1006
+        }, 
+        {
+            "BlockToken": "AAQBAT94xJfbR8TumBPYBiBCFC7MWEfHJjv6C41zYHuFRpyzbmyz6UMMiZIn", 
+            "BlockIndex": 1007
+        }, 
+        {
+            "BlockToken": "AAQBARKgT9hPk12iBVbJtM5JMl6ShdAfe69hHTSAcnEm66rUovPE4mU9lIjv", 
+            "BlockIndex": 1008
+        }, 
+        {
+            "BlockToken": "AAQBAWSu0jkK8fXl3KiTmLYNjQRy7zqwKZ8Zf7bXX46pw+AIqfcl3kBQ+qqf", 
+            "BlockIndex": 1009
+        }, 
+        {
+            "BlockToken": "AAQBAWxWscGvEgk3bpMTrc7GELup0FvwKxrQRih1QxUNVSPjzutybCzDki6Q", 
+            "BlockIndex": 1010
+        }, 
+        {
+            "BlockToken": "AAQBAYyheTSar9hbj2lp6ZS4uLiQOzKiMBY8xHO3z/jfJGC7Q74DYaMnp/+0", 
+            "BlockIndex": 1011
+        }, 
+        {
+            "BlockToken": "AAQBAeQzyuEB22SqSkcovqJl/sig/MbHfI1EMkEZI4cTCdKmsaFaElyA0Ypw", 
+            "BlockIndex": 1012
+        }, 
+        {
+            "BlockToken": "AAQBAZRS4/BWJR7AfaeH2ve/CkougnWuQCrzDt4ppaQJrNEXzoqL/FvVYjCY", 
+            "BlockIndex": 1013
+        }, 
+        {
+            "BlockToken": "AAQBAf+SwsYnmAKXBrXPFl7Ehv5zn9ePsiSw0tVvqxtViVeZ690G5csZTSNh", 
+            "BlockIndex": 1014
+        }, 
+        {
+            "BlockToken": "AAQBAaXGU2ShcGW5fete2HgJfsXHb++H1Y5+ZR5YFay7sD6yLRuPiG59CEe+", 
+            "BlockIndex": 1015
+        }, 
+        {
+            "BlockToken": "AAQBAct9dbCT05VPNItMN58xMRBOlyluTKkP9aI17OXkfAkRkfLPyScPDnio", 
+            "BlockIndex": 1016
+        }, 
+        {
+            "BlockToken": "AAQBAQnb6R3cPlKFZVOpNeT9QeWGjGHraoY1nxQb5TdBV0lVotLhuHDG7NNm", 
+            "BlockIndex": 1017
+        }, 
+        {
+            "BlockToken": "AAQBAXrPvES0CgjjXEzk3mGqOk7KdoX4AsRzszrQxYSupICSxS+oea1pJYhN", 
+            "BlockIndex": 1018
+        }, 
+        {
+            "BlockToken": "AAQBAZ/bqWgKxi0Ey0zpnzNfMRL+SyOrlrohAsQp+IrCFTYP3p81MYMFNFNW", 
+            "BlockIndex": 1019
+        }, 
+        {
+            "BlockToken": "AAQBAQZSNOjCOyJzOptdpEmGyr8VrFQU3Ug3PtlZ3D6ArtIJh0cEkcEJ4fn2", 
+            "BlockIndex": 1020
+        }, 
+        {
+            "BlockToken": "AAQBAULjNJc3gxJ620TdWdT72s4nAA/Flf+z+wtvfDDz6WtI6JKXTWBghBu/", 
+            "BlockIndex": 1021
+        }, 
+        {
+            "BlockToken": "AAQBAQ6Vr3d7T33oF11P1exlg9fsSmyQdFv7HG10jzy+vlzBQI8lE6xN7kGP", 
+            "BlockIndex": 1022
+        }, 
+        {
+            "BlockToken": "AAQBAVBr+j5UQoGGcL4i+Vpcu8sZH9gOUDuW43Dfc4JzycG4wlvh1iJKjbTI", 
+            "BlockIndex": 1023
+        }, 
+        {
+            "BlockToken": "AAQBAf0aoHkb2Q0t0IZQFJJfOynUnDVe0MJkWeUjU9YkH5wIYGxfXViA3Aub", 
+            "BlockIndex": 1024
+        }, 
+        {
+            "BlockToken": "AAQBAQSgF4NBS0xDvqkZcLxsFGOQk6vWlSuJNTnkUhcl5pK0jSY1PpcV9aGY", 
+            "BlockIndex": 1025
+        }, 
+        {
+            "BlockToken": "AAQBAR9OHJfAKmKtSg4sBpwVabgsFtrSBNAlecS9asI2gJZKjgIBl5T29mn3", 
+            "BlockIndex": 1026
+        }, 
+        {
+            "BlockToken": "AAQBAWHjIBTTRvXiIboNLiqn9dxb+PKNZEuPC8eDNhkdTgK9LRG7E42PeAnQ", 
+            "BlockIndex": 1027
+        }, 
+        {
+            "BlockToken": "AAQBAVAfFFFRSNlJkuYYOhAj6w1c4FZHF6QDsoDZySMWaS2h3eJm54EIjBfJ", 
+            "BlockIndex": 1028
+        }, 
+        {
+            "BlockToken": "AAQBARmIt1VlaqNnxBSlzYQIk4yl7peJsA2VFdCEW8pIkKgliKycRmkF1xSo", 
+            "BlockIndex": 1029
+        }, 
+        {
+            "BlockToken": "AAQBAQcoOFNqcaV+zlvGtemJ3MS9rXJJhtPm3MEYmVLreGV+H8RXQm4/ZfRo", 
+            "BlockIndex": 1030
+        }, 
+        {
+            "BlockToken": "AAQBAZXnJzqdWdP9h2Y8C0ULA/Co6lnSEhPk0Zulpq7FGZ1oiVvvymHIfK0L", 
+            "BlockIndex": 1031
+        }, 
+        {
+            "BlockToken": "AAQBAbzWIfpwleDeNkDt7u6BZgzCdx4UX7klt2VZHv5oJUGYgDI13iDoDAxg", 
+            "BlockIndex": 1032
+        }, 
+        {
+            "BlockToken": "AAQBASA8rgJTPDJmE3I8KyNKWqT+nwGbYQxN05230pboHvj+b6rQQTyA0ej2", 
+            "BlockIndex": 1033
+        }, 
+        {
+            "BlockToken": "AAQBAY/jNk3/c+HUYZW3etDRLo6jSRSr7lMsHGiaNhwINL8TxMWpd/aYKSZ9", 
+            "BlockIndex": 1034
+        }, 
+        {
+            "BlockToken": "AAQBATjR/uTtxoYIZyv177QEk4VBpw4OsgkaxvHfMGQccjGiQAkiIM1i04Ud", 
+            "BlockIndex": 1035
+        }, 
+        {
+            "BlockToken": "AAQBASRgTDr+YeomrQWaMy9v+Ot0VtWLwCy6QiEtgo8Wi2h92/KY6lw6pNL4", 
+            "BlockIndex": 1036
+        }, 
+        {
+            "BlockToken": "AAQBAaSoqzbR7Q7ghXT8rFxTbD8Fis+GfjAUFmpSqpx40D/koLt4y8qRIpdk", 
+            "BlockIndex": 1037
+        }, 
+        {
+            "BlockToken": "AAQBARqVbbjrkWK5BZbzgvac4jaiBl2S7vnMTp4lCV7NHktxObUoWJFzJGW2", 
+            "BlockIndex": 1038
+        }, 
+        {
+            "BlockToken": "AAQBAcvff3bI7AtRVq7WbHRChxdLlulMswmVcybCpaUpZ/V8jYzvrnvorcKo", 
+            "BlockIndex": 1039
+        }, 
+        {
+            "BlockToken": "AAQBAbhdr9bZiBrNLX6B3Y/6DIr/s3FNnQQM6mnTQYf7+IU6WoUb6hY5QRv7", 
+            "BlockIndex": 1040
+        }, 
+        {
+            "BlockToken": "AAQBAWa8KiImu8dC2GrrHl1C37MUKWQTPgZAsdIWKFA+phnwIEAorP/rsATy", 
+            "BlockIndex": 1041
+        }, 
+        {
+            "BlockToken": "AAQBAVI9SJXa7AwaFhWJBHRuprnOe287gyTOToGOufqs+AvbiiHuuMuJkSAh", 
+            "BlockIndex": 1042
+        }, 
+        {
+            "BlockToken": "AAQBATiiUmjuZ4ZvVKhG1I9IyFmSdlDMIs3dae+0E7BOz0xUAbotwToABJ5G", 
+            "BlockIndex": 1043
+        }, 
+        {
+            "BlockToken": "AAQBAQJF0hHOAGKGWq4JLPKqytrOhI1tf91EXDrQkbgRYMIMRNimFVDGTQN6", 
+            "BlockIndex": 1044
+        }, 
+        {
+            "BlockToken": "AAQBAbF+0o8dePExf9n6hShdIB3h8Ynx5bAaezahkWf669c6gheWfG5ZxMsO", 
+            "BlockIndex": 1045
+        }, 
+        {
+            "BlockToken": "AAQBAVjmGmMVDKEBkU2ML90CEkU6SJTTCx0f/RSxW8F7PpN7q08znKPo4O88", 
+            "BlockIndex": 1046
+        }, 
+        {
+            "BlockToken": "AAQBAYEKGo/XDjH4rIwUIjNS4VvcJqVA9oaLqX/A1YJAnvJ29lr+iOrCk+mK", 
+            "BlockIndex": 1047
+        }, 
+        {
+            "BlockToken": "AAQBAekOwrDQr6CawSE2zc7FP+rYGWjFDfZPpY3Rex1b7DruN/KuoVfIQMMY", 
+            "BlockIndex": 1048
+        }, 
+        {
+            "BlockToken": "AAQBAaVtFl4vbZMp2SJXAPv83wlJzHjeFBHTQcjnrU5ktOVf3FUxWgN7S2lD", 
+            "BlockIndex": 1049
+        }, 
+        {
+            "BlockToken": "AAQBAV6917o0X1ZbcKiO7MYArcHOv01Lg8xejHUl90wPpnsZiys3PoKVg72J", 
+            "BlockIndex": 1050
+        }, 
+        {
+            "BlockToken": "AAQBAf8QdW9hsSrRiH1HDaQU5FYHyOWoK/eKOAK6kFsM+pQqLl1e1StRDxIl", 
+            "BlockIndex": 1051
+        }, 
+        {
+            "BlockToken": "AAQBAbN2fyxh4FteoHc6heO3ydS8gQ015UCp+Xq+x4C73RngsyRx5Bj5sSav", 
+            "BlockIndex": 1052
+        }, 
+        {
+            "BlockToken": "AAQBATiYw3xv3nTqwr0/5YZGX2aDUiNSv7Boz68lARP9Rr6Tx8s+TYxa93Qe", 
+            "BlockIndex": 1053
+        }, 
+        {
+            "BlockToken": "AAQBASLNvmlYMY0TsRZtuG+5KtN0SVG6+rgw2r80GR1OCSru2w0gGBB1i1Au", 
+            "BlockIndex": 1054
+        }, 
+        {
+            "BlockToken": "AAQBAWygvC6t0D5Qo+6UgZD/F7eT4/QrwHxQAq3WDgOJQvomTxWBbrvieqqf", 
+            "BlockIndex": 1055
+        }, 
+        {
+            "BlockToken": "AAQBAQWTfIRPExATeRuTbS/NDkjLmRuCCVtYTBzqDtnXHjiJnsDoTeYPn/Wn", 
+            "BlockIndex": 1056
+        }, 
+        {
+            "BlockToken": "AAQBAe7s3IGidW4zHtr2cs1/2HkdYNKZ7eihoE9TwcO/viENnS6mhe+O/S4H", 
+            "BlockIndex": 1057
+        }, 
+        {
+            "BlockToken": "AAQBAX876teBx9LIJBoLgZuJglKGB6qTE+qVvbP11ulQ/Szm+gFnU0Oo+ugO", 
+            "BlockIndex": 1058
+        }, 
+        {
+            "BlockToken": "AAQBAd53ZEITc0BaS1WivPlGAVveEUuHE+uWwtitdlpAqkVJHeEBuiUrBky8", 
+            "BlockIndex": 1059
+        }, 
+        {
+            "BlockToken": "AAQBAb+YEROTTitgPvbHjVTtdKBsKzUakPBcEzXKE85MP3Tz8En91s830vyx", 
+            "BlockIndex": 1060
+        }, 
+        {
+            "BlockToken": "AAQBATHmRgpliqoyHhOtavID5cu4be9eCN4eFe7bugpkRIrkkkYdPNPwmO2r", 
+            "BlockIndex": 1061
+        }, 
+        {
+            "BlockToken": "AAQBAR0Dak/dHObihJH7dtEOBmETThdByf//q2xpeORBFC6hsT6ROTO/77C0", 
+            "BlockIndex": 1062
+        }, 
+        {
+            "BlockToken": "AAQBAbqSDuEd93jqAv5PB8zYmGHnk/1E9vh7DLqwIOOe0vQeur+teVLtWVKk", 
+            "BlockIndex": 1063
+        }, 
+        {
+            "BlockToken": "AAQBASXSfQEKCKGl9NJWX8MpGtG52cVRF7plYgmJLTKRxPURlyaRMfzXRqf4", 
+            "BlockIndex": 1064
+        }, 
+        {
+            "BlockToken": "AAQBAQXceGr36v47e6WOkA3O7ZZHOY7Aj2ECl+p7Xni7F4L0/d6tRz4A83kr", 
+            "BlockIndex": 1065
+        }, 
+        {
+            "BlockToken": "AAQBAQj/NM2og/N742tGN7W7p9dogJzlj5AxJZ+oNXn5HIRVxV+zOEKgsRhX", 
+            "BlockIndex": 1066
+        }, 
+        {
+            "BlockToken": "AAQBAajmldfRw0WrRh9A/ycjyXrJ0D9jb51vyDlqfY03QhYuPuRlaaGu3emG", 
+            "BlockIndex": 1067
+        }, 
+        {
+            "BlockToken": "AAQBASUDtXReWlukOYOPgbL6IEesacr+ulk81tgaBDtTHJiTeyTWBg/2mW+R", 
+            "BlockIndex": 1068
+        }, 
+        {
+            "BlockToken": "AAQBAZV1rSAo0exyXcLy3fSvevfUnu+hCCuZRWcVSsJGa77Gapsy2zo+asfN", 
+            "BlockIndex": 1069
+        }, 
+        {
+            "BlockToken": "AAQBAfD4AeqtBqAzG/yspn0EfFriwqlupdxWHj5TGdv7Vys4+IA8VGYXZOjm", 
+            "BlockIndex": 1070
+        }, 
+        {
+            "BlockToken": "AAQBAQcXfnSsfka6cnJDtEg6ZkxYszsuN1fyJXC6Q6pUAyc3GeCaUoIwuQ8U", 
+            "BlockIndex": 1071
+        }, 
+        {
+            "BlockToken": "AAQBAfV6LNyUrVVClAHo1P6Hm40HVOD+m87sc4Lz25QhfkN6O0U/e8RQn/OZ", 
+            "BlockIndex": 1072
+        }, 
+        {
+            "BlockToken": "AAQBAVyeEmaeoTJGQd66eMCv3Ik+D0cB07P3ChebRnhwqqjs/qYedEiR68pP", 
+            "BlockIndex": 1073
+        }, 
+        {
+            "BlockToken": "AAQBAVEZBA5hQHWXSow03woL4eb0AX2WTRqnsvTPCSusTDOFJfeVPVDKXRtd", 
+            "BlockIndex": 1074
+        }, 
+        {
+            "BlockToken": "AAQBAeGQ3bvr7bTlM8qgzgmbO+6vNrn5fNkLidoCMypF7RFOrNVoHrv/DNp5", 
+            "BlockIndex": 1075
+        }, 
+        {
+            "BlockToken": "AAQBAeR58qh8xCfggIwGJ79XxN0F+9UzClPwSTYRurbeT8jLR0sYj/8G0Q5h", 
+            "BlockIndex": 1076
+        }, 
+        {
+            "BlockToken": "AAQBAeh6Yi1+UdxSgYfLq/8dY/rdGVFQOXHnfKZOMfhivmdl/7dSKgbxP4BP", 
+            "BlockIndex": 1077
+        }, 
+        {
+            "BlockToken": "AAQBAdddQRsrhHHDHtqFHx91InTO4rrTew0xXT44TO8XDWqvq6nH8Sx5YDuD", 
+            "BlockIndex": 1078
+        }, 
+        {
+            "BlockToken": "AAQBAbR8eNas6NXHgqYSYFSRJLSd6DAPnKPFgYEXYUwROO8G5hN/jGJUx5Xi", 
+            "BlockIndex": 1079
+        }, 
+        {
+            "BlockToken": "AAQBARyPdL3YTBFP5raUtC04hfdBY4te6n3XdJ/Jc/1lJTsiOlxv/BL7utbk", 
+            "BlockIndex": 1080
+        }, 
+        {
+            "BlockToken": "AAQBAeqLUAdX/ZvPX1dnJuKQ4ott+43GrlNarYY51khiHH49AihgSaeEyV6n", 
+            "BlockIndex": 1081
+        }, 
+        {
+            "BlockToken": "AAQBAQWx4I+oSx9eftYnYC+LwJ18N9csoZk8ndgCgmq8qmFeJ9BT6Rtw3TR4", 
+            "BlockIndex": 1082
+        }, 
+        {
+            "BlockToken": "AAQBAb3M5nZJ1fGOZwm3w19g9WHj95rmK1VfREUizUTBO+gZ9/HfG8xhbHdk", 
+            "BlockIndex": 1083
+        }, 
+        {
+            "BlockToken": "AAQBAUdvi56gEKu5zdKEWd6wHMu1M28XWIBo07b9iQT3xpu3Ezl3r1a2eVE3", 
+            "BlockIndex": 1084
+        }, 
+        {
+            "BlockToken": "AAQBAQvYZMpPt8cPMuZDoraCcFjSCsH9/asvhvHI9QLKxPQOcPN6g6qS4JGk", 
+            "BlockIndex": 1085
+        }, 
+        {
+            "BlockToken": "AAQBAW/378+xYZCRalEnSBoZ1uzNZ92lS7MY5QHmrPcgV7j2IVyNBy5Dr4wk", 
+            "BlockIndex": 1086
+        }, 
+        {
+            "BlockToken": "AAQBAYxDfPfkwS6Fqv1UPXbftC8HOBjHwuBGhU109TUkh+gvbUI1zmX0YtZy", 
+            "BlockIndex": 1087
+        }, 
+        {
+            "BlockToken": "AAQBAS3wNYEWZJ49j8iq7zGjxFDOi4MJyxPTD6Co4YkTMRx84hzQHqwi52Pg", 
+            "BlockIndex": 1088
+        }, 
+        {
+            "BlockToken": "AAQBAUncAAjUYQieBliaunbE/zrCIsP/Nx+3pi/hj6RFjcsn3mWTWUMM62I9", 
+            "BlockIndex": 1089
+        }, 
+        {
+            "BlockToken": "AAQBAUD3WCD6NeRWG0qh+AKTrgaA6Y+M1kcLX4nB4+H59DBiM4egtyR0SZCL", 
+            "BlockIndex": 1090
+        }, 
+        {
+            "BlockToken": "AAQBAUug9I77K3vGnM8TenjgC4HGfi4Nr32qkptQSMwMZWQDlVDMiCasObyY", 
+            "BlockIndex": 1091
+        }, 
+        {
+            "BlockToken": "AAQBAWpWXKbuleReHiKPdUIS1/Xu5kbDp/bSXvXru1t7nSSwxVfh0zikMeE2", 
+            "BlockIndex": 1092
+        }, 
+        {
+            "BlockToken": "AAQBAT53HT5roH/3GPJ+LFocd2OIdrowbYQVlBczUQToarXmNYstXv7smMOP", 
+            "BlockIndex": 1093
+        }, 
+        {
+            "BlockToken": "AAQBAXC/RcxEAPnYuKbzcF7b5jqNpcQEhMOOXOZc/+yrZUrY4d+Byo8HRrUS", 
+            "BlockIndex": 1094
+        }, 
+        {
+            "BlockToken": "AAQBAdrdan020SD9JkNifgGQa8FASlLmLqCDC1RyNVNfY6C193nTdJS5DHfc", 
+            "BlockIndex": 1095
+        }, 
+        {
+            "BlockToken": "AAQBAXBDzI3qTj1exf2kba7s2Iu7O0myXh51B2aPnT7vur0OLyoxDjhqmUlc", 
+            "BlockIndex": 1096
+        }, 
+        {
+            "BlockToken": "AAQBAXfVJCd0Y5heeTg6BI3dJyXvtsxnJgoc8cTxy7cuerLkkn0+iq+r7XNk", 
+            "BlockIndex": 1097
+        }, 
+        {
+            "BlockToken": "AAQBAQJC2J9PBLkmnTdkZFUbnWrqfRBeztpr2IAcRRZ77D9ZWuBz+45APZEC", 
+            "BlockIndex": 1098
+        }, 
+        {
+            "BlockToken": "AAQBAYHNcdinQADCrjYSgMXGMqI4OKJsn7HIKBqTEIJlQkPvtxAGL8kVYVbY", 
+            "BlockIndex": 1099
+        }
+    ], 
+    "BlockSize": 524288, 
+    "NextToken": "AAQCAWet0tN0jlgOROPfsP9VZMz6FWEuAh3ypuuVMLN11atf2JncCbnt9Pxo", 
+    "ExpiryTime": 1590583057.706
+}
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
