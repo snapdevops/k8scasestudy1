@@ -21,7 +21,7 @@ items:
         app: nginx
     strategy:
       rollingUpdate:
-        maxSurge: 25%
+        maxSurge: 10%
         maxUnavailable: 0%
       type: RollingUpdate
     template:
