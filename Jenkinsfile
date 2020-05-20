@@ -7,6 +7,7 @@ pipeline {
                 // Example AWS credentials
                 withCredentials(
                 [[
+                    // Pass the AWS ID credentails as jenkins secret using AWS Secret SDK plug in
                     $class: 'AmazonWebServicesCredentialsBinding',
                     accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                     credentialsId: 'AWSID',  // ID of credentials in Jenkins
