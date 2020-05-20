@@ -23,6 +23,17 @@ Here when image upgrade is happening all the exisitng replicas still be availabl
 -	Content of index page will be passed in as a configmap, you define the content
 
  kubectl create cm webcodecm --from-file=nginx-web.html
+ 
+ Describe POD:
+ Volumes:
+  webcode:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      webcodecm
+root@nginx-deployment-8445db96bf-fx8jf:/usr/share/nginx/html# ls -lrt
+total 0
+lrwxrwxrwx 1 root root 21 May 20 18:51 nginx-web.html -> ..data/nginx-web.html
 
 -	Generate a self-signed cert, passed it to nginx for SSL configuration
+
+
 -	Setup auto-scaling for nginx pods if CPU tries to reach a threshold (you define it), min pod is 1, max is 2
