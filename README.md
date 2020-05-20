@@ -14,6 +14,15 @@ Here when image upgrade is happening all the exisitng replicas still be availabl
         maxUnavailable: 0%
 
 -	If the pod tries to get more than 200Mb of memory, should be restarted by OOM
+        resources:
+          requests:
+            memory: "128Mi"
+          limits:
+            memory: "200Mi"
+       
 -	Content of index page will be passed in as a configmap, you define the content
+
+ kubectl create cm webcodecm --from-file=nginx-web.html
+
 -	Generate a self-signed cert, passed it to nginx for SSL configuration
 -	Setup auto-scaling for nginx pods if CPU tries to reach a threshold (you define it), min pod is 1, max is 2
